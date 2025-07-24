@@ -1,0 +1,23 @@
+[project]
+name = "strawberry-sentry"
+version = "0.1.0"
+description = ""
+authors = [{ name = "Alexander Kulia", email = "37775912+AlexanderKulia@users.noreply.github.com" }]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+  "strawberry-graphql[debug-server] (>=0.278.0,<0.279.0)",
+  "sentry-sdk (>=2.33.2,<3.0.0)",
+  "dotenv (>=0.9.9,<0.10.0)",
+  "uvicorn (>=0.35.0,<0.36.0)",
+  "fastapi (>=0.116.1,<0.117.0)",
+  "sqlalchemy[asyncio] (>=2.0.41,<3.0.0)",
+  "aiosqlite (>=0.21.0,<0.22.0)",
+]
+
+[tool.poetry]
+packages = [{ include = "strawberry_sentry", from = "src" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
